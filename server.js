@@ -42,4 +42,5 @@ app.post('/api/notes', (req, res) => {
     res.join(noteList);
 });
 
+// if deployed correctly should prompt this in the command line, 'Server is listening on PORT (PORT #)'
 app.listen(PORT, () => console.log('Server is listening on PORT ' + PORT));
