@@ -27,7 +27,7 @@ app.get('/api/notes', (req, res) => {
 // used as a route to the index.html file
 // index.html file should appear as the home page
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__filename, '/public/index.html'));
+    res.sendFile(path.join(__dirname, '/public/index.html'));
 });
 
 // this code block will read the db.json file, then uses a post request and assigns it to newNote
