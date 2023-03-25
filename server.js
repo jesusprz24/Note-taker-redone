@@ -40,7 +40,15 @@ app.post('/api/notes', (req, res) => {
     noteList.push(newNote);
     fs.writeFileSync('./db/db.json', JSON.stringify(noteList));
     res.join(noteList);
-});
+})
+
+app.delete('/api/notes/:id', (req, res) => {
+    var noteList = JSON.parse(fs.readFileSync('./db/db.json', 'utf8'));
+    var noteId = req.params.id;
+    var newNote = noteList.filter(note => note.id !== noteId);
+    fs.writeFileSync('./db/db.json', JSON.stringify(newNote));
+    res.json(newNote);
+})
 
 // if deployed correctly should prompt this in the command line, 'Server is listening on PORT (PORT #)'
 app.listen(PORT, () => console.log('Server is listening on PORT ' + PORT));
