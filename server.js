@@ -42,6 +42,7 @@ app.post('/api/notes', (req, res) => {
     res.join(noteList);
 })
 
+// this will delete the saved notes with the linked ids
 app.delete('/api/notes/:id', (req, res) => {
     var noteList = JSON.parse(fs.readFileSync('./db/db.json', 'utf8'));
     var noteId = req.params.id;
