@@ -25,8 +25,11 @@ The user will be able to write down notes that include the title of the note and
 This application uses an MIT license.
 
 # Screenshot:
+![alt text](./images/screenshot1.png "screenshot1")
+![alt text](./images/screenshot2.png "screenshot2")
 
 # Github URL:
+https://github.com/jesusprz24/Note-taker-redone
 
 # Live URL:
 
