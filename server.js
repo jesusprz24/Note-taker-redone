@@ -20,3 +20,15 @@ app.get('/api/notes', (req, res) => {
 app.get('*', (req, res) => {
     res.sendFile(path.join(__filename, '/public/index.html'));
 });
+
+
+app.post('/api/notes', (req, res) => {
+    var newNote = req.body;
+    var noteList = JSON.parse(fs.readFileSync('./db/db.json', 'utf8'));
+    var noteLength = (noteList.length).toString();
+    
+    newNote.id = noteLength;
+    noteList.push(newNote);
+    fs.writeFileSync('./db/db.json', JSON.stringify(noteList));
+    res.join(noteList);
+})
