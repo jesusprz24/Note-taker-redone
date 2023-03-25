@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3001;
 // this is the middleware, it is used for requests that will match the public directory (css, html, javascript)
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true}));
-app.use(express.json);
+app.use(express.json());
 
 // used as a route to the notes.html file
 app.get('/notes', (req, res) => {
