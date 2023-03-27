@@ -31,5 +31,8 @@ This application uses an MIT license.
 # Github URL:
 https://github.com/jesusprz24/Note-taker-redone
 
-# Live URL:
+# Live URL: 
+This application is deployed using Heroku.
+
+https://note-taker-redone.herokuapp.com/
 
